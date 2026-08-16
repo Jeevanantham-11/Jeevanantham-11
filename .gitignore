@@ -1,0 +1,30 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & Secrets (Zero Leak Guarantee)
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+secrets/
+
+# IDE & Editor Configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local Testing & Server Files
+preview.html
+*.log
+__pycache__/
+*.pyc
+
+# Node / Build artifacts
+node_modules/
+dist/
+build/

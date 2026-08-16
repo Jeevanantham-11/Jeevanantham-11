@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 375" width="100%" height="100%">
+  <defs>
+    <!-- Dynamic Living Mesh Background -->
+    <linearGradient id="luxury-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#fdfcf9"/>
+      <stop offset="70%" stop-color="#f8f4eb"/>
+      <stop offset="100%" stop-color="#f2eadb"/>
+    </linearGradient>
+
+    <!-- Living Gold Auroras -->
+    <radialGradient id="aurora-1" cx="85%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ecd5b0" stop-opacity="0.75"/>
+      <stop offset="45%" stop-color="#f7eee0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="aurora-2" cx="15%" cy="75%" r="55%">
+      <stop offset="0%" stop-color="#ead3b2" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#fdfbf7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Champagne Gold Gradients -->
+    <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a6b3e"/>
+      <stop offset="25%" stop-color="#c5a880"/>
+      <stop offset="50%" stop-color="#f3e2c3"/>
+      <stop offset="75%" stop-color="#c5a880"/>
+      <stop offset="100%" stop-color="#8a6b3e"/>
+    </linearGradient>
+
+    <!-- 3D Gold Coin Reflection Gradient -->
+    <linearGradient id="coin-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf6e7"/>
+      <stop offset="30%" stop-color="#e2c69b"/>
+      <stop offset="60%" stop-color="#c5a880"/>
+      <stop offset="100%" stop-color="#8a6b3e"/>
+    </linearGradient>
+
+    <linearGradient id="gold-pill-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dec9a8"/>
+      <stop offset="100%" stop-color="#bda075"/>
+    </linearGradient>
+
+    <!-- Sparkle Glow Filter -->
+    <filter id="sparkle-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Subtle Dot Grid Texture -->
+    <pattern id="luxury-dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#c5a880" fill-opacity="0.16"/>
+    </pattern>
+
+    <!-- Full Width Clip Path for 'JEEVANANTHAM C' -->
+    <clipPath id="typewriter-clip">
+      <rect x="0" y="0" width="0" height="90">
+        <animate attributeName="width" from="0" to="850" dur="2.2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+    </clipPath>
+
+    <!-- Soft Drop Shadows -->
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#8c734b" flood-opacity="0.09"/>
+    </filter>
+
+    <filter id="pill-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#a68a5c" flood-opacity="0.08"/>
+    </filter>
+
+    <style>
+      .font-serif { font-family: 'Playfair Display', 'Cinzel', 'Georgia', serif; }
+      .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .font-mono { font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace; }
+      
+      @keyframes floatAurora1 {
+        0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.7; }
+        50% { transform: translate(-30px, 15px) scale(1.08); opacity: 0.95; }
+      }
+
+      @keyframes floatAurora2 {
+        0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.5; }
+        50% { transform: translate(25px, -20px) scale(1.12); opacity: 0.85; }
+      }
+
+      /* Flowing Golden Spark Particles (Top-to-Bottom / Floating Drift) */
+      @keyframes sparkFlow1 {
+        0% { transform: translateY(-20px) translateX(0px); opacity: 0; }
+        20% { opacity: 0.8; }
+        50% { transform: translateY(180px) translateX(15px); opacity: 1; }
+        80% { opacity: 0.8; }
+        100% { transform: translateY(380px) translateX(-10px); opacity: 0; }
+      }
+
+      @keyframes sparkFlow2 {
+        0% { transform: translateY(-30px) translateX(0px); opacity: 0; }
+        25% { opacity: 0.9; }
+        50% { transform: translateY(190px) translateX(-20px); opacity: 0.6; }
+        75% { opacity: 0.9; }
+        100% { transform: translateY(390px) translateX(15px); opacity: 0; }
+      }
+
+      @keyframes sparkTwinkle {
+        0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.2; }
+        50% { transform: scale(1.3) rotate(45deg); opacity: 0.95; }
+      }
+
+      .aurora-motion-1 { animation: floatAurora1 10s ease-in-out infinite; transform-origin: 85% 30%; }
+      .aurora-motion-2 { animation: floatAurora2 12s ease-in-out infinite; transform-origin: 15% 75%; }
+      
+      .spark-1 { animation: sparkFlow1 8s linear infinite; }
+      .spark-2 { animation: sparkFlow2 9.5s linear infinite 2s; }
+      .spark-3 { animation: sparkFlow1 7.5s linear infinite 4.5s; }
+      .spark-4 { animation: sparkFlow2 8.5s linear infinite 1s; }
+      .spark-5 { animation: sparkFlow1 10s linear infinite 3s; }
+      .spark-6 { animation: sparkFlow2 7s linear infinite 5s; }
+
+      .twinkle-1 { animation: sparkTwinkle 3s ease-in-out infinite; }
+      .twinkle-2 { animation: sparkTwinkle 4s ease-in-out infinite 1.5s; }
+      .twinkle-3 { animation: sparkTwinkle 3.5s ease-in-out infinite 0.7s; }
+    </style>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="1200" height="375" rx="18" fill="url(#luxury-bg)" stroke="#e8dfd1" stroke-width="1.2" filter="url(#card-shadow)"/>
+  
+  <!-- Living Ambient Background Auroras -->
+  <rect width="1200" height="375" rx="18" fill="url(#luxury-dots)"/>
+  <rect width="1200" height="375" rx="18" fill="url(#aurora-1)" class="aurora-motion-1"/>
+  <rect width="1200" height="375" rx="18" fill="url(#aurora-2)" class="aurora-motion-2"/>
+
+  <!-- Flowing Golden Sparks & Ambient Stardust (Top-to-Bottom Movement) -->
+  <g id="sparkle-layer">
+    <!-- Flowing Spark 1 -->
+    <g class="spark-1" transform="translate(180, 0)">
+      <path d="M 0 -4 Q 0 0 4 0 Q 0 0 0 4 Q 0 0 -4 0 Q 0 0 0 -4 Z" fill="url(#gold-foil)" filter="url(#sparkle-glow)"/>
+    </g>
+
+    <!-- Flowing Spark 2 -->
+    <g class="spark-2" transform="translate(420, 0)">
+      <circle cx="0" cy="0" r="2" fill="#c5a880" filter="url(#sparkle-glow)"/>
+    </g>
+
+    <!-- Flowing Spark 3 -->
+    <g class="spark-3" transform="translate(720, 0)">
+      <path d="M 0 -5 Q 0 0 5 0 Q 0 0 0 5 Q 0 0 -5 0 Q 0 0 0 -5 Z" fill="url(#gold-foil)" filter="url(#sparkle-glow)"/>
+    </g>
+
+    <!-- Flowing Spark 4 -->
+    <g class="spark-4" transform="translate(920, 0)">
+      <circle cx="0" cy="0" r="2.5" fill="#edd8b4" filter="url(#sparkle-glow)"/>
+    </g>
+
+    <!-- Flowing Spark 5 -->
+    <g class="spark-5" transform="translate(290, 0)">
+      <circle cx="0" cy="0" r="1.8" fill="#c5a880"/>
+    </g>
+
+    <!-- Flowing Spark 6 -->
+    <g class="spark-6" transform="translate(810, 0)">
+      <path d="M 0 -3.5 Q 0 0 3.5 0 Q 0 0 0 3.5 Q 0 0 -3.5 0 Q 0 0 0 -3.5 Z" fill="url(#gold-foil)"/>
+    </g>
+
+    <!-- Floating Twinkle Diamonds -->
+    <g transform="translate(350, 80)" class="twinkle-1">
+      <path d="M 0 -4 Q 0 0 4 0 Q 0 0 0 4 Q 0 0 -4 0 Q 0 0 0 -4 Z" fill="url(#gold-foil)" filter="url(#sparkle-glow)"/>
+    </g>
+    <g transform="translate(680, 260)" class="twinkle-2">
+      <path d="M 0 -3.5 Q 0 0 3.5 0 Q 0 0 0 3.5 Q 0 0 -3.5 0 Q 0 0 0 -3.5 Z" fill="#c5a880"/>
+    </g>
+    <g transform="translate(880, 110)" class="twinkle-3">
+      <circle cx="0" cy="0" r="2" fill="#edd8b4" filter="url(#sparkle-glow)"/>
+    </g>
+  </g>
+
+  <!-- Minimalist Double Hairline Border -->
+  <rect x="22" y="22" width="1156" height="331" rx="12" fill="none" stroke="#ebdcc4" stroke-width="1"/>
+  <rect x="28" y="28" width="1144" height="319" rx="10" fill="none" stroke="#f4ede0" stroke-width="0.75"/>
+
+  <!-- Corner Brackets (Champagne Gold Accents) -->
+  <path d="M 40 56 L 40 40 L 56 40" fill="none" stroke="url(#gold-foil)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 1160 56 L 1160 40 L 1144 40" fill="none" stroke="url(#gold-foil)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 40 319 L 40 335 L 56 335" fill="none" stroke="url(#gold-foil)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M 1160 319 L 1160 335 L 1144 335" fill="none" stroke="url(#gold-foil)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Top Status Pill & Live Indicator -->
+  <g transform="translate(62, 54)">
+    <rect width="192" height="28" rx="14" fill="#ffffff" stroke="url(#gold-pill-border)" stroke-width="1" filter="url(#pill-shadow)"/>
+    <circle cx="15" cy="14" r="4" fill="#2e7d32"/>
+    <circle cx="15" cy="14" r="7" fill="#2e7d32" opacity="0.3">
+      <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="28" y="18" class="font-sans" font-size="10.5" font-weight="700" fill="#5c482d" letter-spacing="1">AVAILABLE FOR ROLES</text>
+    
+    <text x="218" y="18" class="font-sans" font-size="11" font-weight="600" fill="#8c8275" letter-spacing="0.8">CHENNAI, INDIA</text>
+  </g>
+
+  <!-- Right Geometric 3D Spinning Gold Coin Monogram (Native SMIL LeetCoin Rotation) -->
+  <g transform="translate(1035, 185)">
+    <!-- Rotating Orbital Outer Markers -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="84" fill="none" stroke="#ebdcc4" stroke-width="1" stroke-dasharray="4 6"/>
+      <circle cx="0" cy="-84" r="3" fill="#c5a880"/>
+      <circle cx="84" cy="0" r="2.5" fill="#8a6b3e"/>
+      <circle cx="0" cy="84" r="3" fill="#c5a880"/>
+      <circle cx="-84" cy="0" r="2.5" fill="#8a6b3e"/>
+    </g>
+
+    <!-- 3D Spinning Gold Coin (ScaleX Matrix Revolution) -->
+    <g>
+      <animateTransform attributeName="transform" type="scale" 
+        values="1 1; 0.04 1; -1 1; 0.04 1; 1 1" 
+        keyTimes="0; 0.25; 0.5; 0.75; 1" 
+        dur="4.5s" 
+        repeatCount="indefinite" 
+        calcMode="spline" 
+        keySplines="0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1; 0.45 0 0.55 1"/>
+      
+      <!-- Outer Coin Rim -->
+      <circle cx="0" cy="0" r="72" fill="url(#coin-gold)" stroke="#8a6b3e" stroke-width="1"/>
+      <circle cx="0" cy="0" r="66" fill="#ffffff" stroke="url(#gold-foil)" stroke-width="1.8"/>
+      <circle cx="0" cy="0" r="54" fill="#faf6ef" stroke="#ebdcc4" stroke-width="1"/>
+      
+      <!-- JC Monogram Letters -->
+      <text x="0" y="17" text-anchor="middle" class="font-serif" font-size="44" font-weight="700" fill="url(#gold-foil)" letter-spacing="2">JC</text>
+    </g>
+  </g>
+
+  <!-- Main Hero Typography with Full Typewriter Animation for JEEVANANTHAM C -->
+  <g transform="translate(62, 114)">
+    
+    <!-- Animated Typewriter Text Block (Full 850px width - Never Clips 'C') -->
+    <g clip-path="url(#typewriter-clip)">
+      <text x="0" y="58" class="font-serif" font-size="48" font-weight="700" fill="#16191f" letter-spacing="1.5">
+        JEEVANANTHAM C
+      </text>
+    </g>
+
+    <!-- Animated Gold Typing Cursor that tracks across the full text -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="570 0" dur="2.2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.25 0.1 0.25 1"/>
+      <rect x="8" y="14" width="3.5" height="48" fill="url(#gold-foil)" rx="1.5">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" begin="2.2s"/>
+      </rect>
+    </g>
+
+    <!-- Elegant Champagne Accent Line -->
+    <rect x="0" y="78" width="240" height="2.5" fill="url(#gold-foil)"/>
+
+    <!-- Clear, Authoritative Roles -->
+    <text x="0" y="120" class="font-sans" font-size="22" font-weight="700" fill="#2d333f" letter-spacing="0.3">
+      Software Development Engineer (SDE) <tspan fill="#c5a880">·</tspan> Machine Learning Engineer
+    </text>
+
+    <!-- High-Signal Core Domain Pills -->
+    <g transform="translate(0, 156)" class="font-sans" font-size="11.5" font-weight="700">
+      <!-- Pill 1: SDE -->
+      <g transform="translate(0, 0)">
+        <rect width="182" height="32" rx="7" fill="#ffffff" stroke="url(#gold-pill-border)" stroke-width="1.1" filter="url(#pill-shadow)"/>
+        <text x="16" y="20" fill="#4d3b24">SOFTWARE ENGINEERING</text>
+      </g>
+
+      <!-- Pill 2: ML -->
+      <g transform="translate(194, 0)">
+        <rect width="175" height="32" rx="7" fill="#ffffff" stroke="url(#gold-pill-border)" stroke-width="1.1" filter="url(#pill-shadow)"/>
+        <text x="16" y="20" fill="#4d3b24">MACHINE LEARNING</text>
+      </g>
+
+      <!-- Pill 3: NLP -->
+      <g transform="translate(381, 0)">
+        <rect width="195" height="32" rx="7" fill="#ffffff" stroke="url(#gold-pill-border)" stroke-width="1.1" filter="url(#pill-shadow)"/>
+        <text x="16" y="20" fill="#4d3b24">NLP &amp; LLM SYSTEMS</text>
+      </g>
+
+      <!-- Pill 4: Systems -->
+      <g transform="translate(588, 0)">
+        <rect width="190" height="32" rx="7" fill="#ffffff" stroke="url(#gold-pill-border)" stroke-width="1.1" filter="url(#pill-shadow)"/>
+        <text x="16" y="20" fill="#4d3b24">SYSTEMS &amp; BACKEND</text>
+      </g>
+    </g>
+  </g>
+</svg>

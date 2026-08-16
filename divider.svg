@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 45" width="100%" height="45">
+  <defs>
+    <linearGradient id="laser-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c5a880" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#c5a880" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#c5a880" stop-opacity="0.95"/>
+      <stop offset="80%" stop-color="#c5a880" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#c5a880" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a6b3e"/>
+      <stop offset="50%" stop-color="#f3e2c3"/>
+      <stop offset="100%" stop-color="#8a6b3e"/>
+    </linearGradient>
+
+    <filter id="spark-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes floatDrift1 {
+        0% { transform: translateY(-10px) translateX(0px); opacity: 0; }
+        25% { opacity: 0.9; }
+        50% { transform: translateY(12px) translateX(15px); opacity: 0.6; }
+        75% { opacity: 0.9; }
+        100% { transform: translateY(35px) translateX(-10px); opacity: 0; }
+      }
+
+      @keyframes floatDrift2 {
+        0% { transform: translateY(-12px) translateX(0px); opacity: 0; }
+        30% { opacity: 0.9; }
+        50% { transform: translateY(15px) translateX(-18px); opacity: 0.7; }
+        80% { opacity: 0.9; }
+        100% { transform: translateY(38px) translateX(12px); opacity: 0; }
+      }
+
+      @keyframes twinkle {
+        0%, 100% { transform: scale(0.6) rotate(0deg); opacity: 0.3; }
+        50% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+      }
+
+      .drift-1 { animation: floatDrift1 4.5s linear infinite; }
+      .drift-2 { animation: floatDrift2 5.5s linear infinite 1.5s; }
+      .drift-3 { animation: floatDrift1 4.8s linear infinite 3s; }
+      .drift-4 { animation: floatDrift2 6s linear infinite 0.8s; }
+      
+      .twinkle-node { animation: twinkle 2.5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Flowing Golden Sparks across Divider -->
+  <g class="drift-1" transform="translate(220, 0)">
+    <path d="M 0 -3.5 Q 0 0 3.5 0 Q 0 0 0 3.5 Q 0 0 -3.5 0 Q 0 0 0 -3.5 Z" fill="url(#gold-foil)" filter="url(#spark-glow)"/>
+  </g>
+  <g class="drift-2" transform="translate(480, 0)">
+    <circle cx="0" cy="0" r="2" fill="#c5a880" filter="url(#spark-glow)"/>
+  </g>
+  <g class="drift-3" transform="translate(740, 0)">
+    <path d="M 0 -4 Q 0 0 4 0 Q 0 0 0 4 Q 0 0 -4 0 Q 0 0 0 -4 Z" fill="url(#gold-foil)" filter="url(#spark-glow)"/>
+  </g>
+  <g class="drift-4" transform="translate(960, 0)">
+    <circle cx="0" cy="0" r="2.2" fill="#edd8b4" filter="url(#spark-glow)"/>
+  </g>
+  <g class="drift-1" transform="translate(350, 0)">
+    <circle cx="0" cy="0" r="1.5" fill="#c5a880"/>
+  </g>
+  <g class="drift-2" transform="translate(840, 0)">
+    <circle cx="0" cy="0" r="1.8" fill="#edd8b4"/>
+  </g>
+
+  <!-- Main Hairline -->
+  <line x1="80" y1="22" x2="1120" y2="22" stroke="url(#laser-gold)" stroke-width="1.2"/>
+
+  <!-- Center Diamond Matrix Node with Twinkle -->
+  <g transform="translate(600, 22)">
+    <polygon points="0,-5 5,0 0,5 -5,0" fill="#c5a880" class="twinkle-node" filter="url(#spark-glow)"/>
+    <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
+  </g>
+</svg>
