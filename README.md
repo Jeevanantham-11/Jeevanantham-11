@@ -7,7 +7,7 @@
 
 <!-- DYNAMIC TYPING FOCUS LINE (ENGINEERING SPECIALIZATIONS ONLY) -->
 <a href="https://github.com/Jeevanantham-11">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=16&duration=3000&pause=1000&color=8A6B3E&center=true&vCenter=true&multiline=false&width=720&height=36&lines=Software+Development+Engineer+(SDE)+%26+Machine+Learning+Engineer;Building+Deterministic+Zero-Trust+Security+for+MCP+AI+Agents;Multi-AGV+Swarm+Model+Predictive+Control+(OSQP+Solver);High-Recall+Graph+Topological+Fraud+Detection+Ensembles;Specializing+in+Applied+NLP%2C+RAG+%26+Distributed+Systems" alt="Focus Line" />
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=16&duration=3000&pause=1000&color=8A6B3E&center=true&vCenter=true&multiline=false&width=720&height=36&lines=Software+Development+Engineer+(SDE)+%26+Machine+Learning+Engineer;Building+Deterministic+Zero-Trust+Security+for+MCP+AI+Agents;Multi-AGV+Swarm+Model+Predictive+Control+(OSQP+Solver);Specializing+in+Applied+NLP%2C+RAG+%26+Distributed+Systems" alt="Focus Line" />
 </a>
 
 <!-- REFINED EDITORIAL STATUS CAPSULES -->
@@ -92,43 +92,6 @@
 
 </td>
 </tr>
-
-<tr>
-<td width="50%" valign="top">
-
-#### Mule Shield AI — Mule Account Detection
-`[ GRAPH FORENSICS ]` `[ ENSEMBLE CLUSTERING ]`
-
-* **Problem:** Organized cyber syndicates exploit multi-hop mule account transactions that evade traditional single-account heuristic fraud checks.
-* **Architecture:** Employs Louvain graph community detection to uncover hidden transactional rings, combined with a high-recall ensemble of XGBoost, LightGBM, and CatBoost with SHAP explainability.
-* **Tech Stack:** `XGBoost` `LightGBM` `Graph Networks` `SHAP` `SMOTE-Tomek`
-
-<details>
-<summary><b>FORENSIC PIPELINE SPECS</b></summary>
-
-* **Topological Clustering:** Identifies coordinated syndicate cycles over transaction graph adjacencies.
-* **Ensemble Recall:** Balanced with SMOTE-Tomek to achieve `99.2%` recall on rare fraud vectors with full tree-attribution SHAP transparency.
-</details>
-
-</td>
-<td width="50%" valign="top">
-
-#### PRAANA — Predictive Business Health
-`[ 90-DAY FORECASTING ]` `[ GROQ LPU INFERENCE ]`
-
-* **Problem:** Small and medium businesses often face sudden operational insolvency due to lack of real-time financial trajectory forecasting and early intervention.
-* **Architecture:** 10-metric dynamic financial scoring engine generating 90-day trajectory forecasts paired with automated mitigation recommendations powered by Llama 3.3 70B on Groq LPUs.
-* **Tech Stack:** `FastAPI` `Next.js 14` `Supabase` `Groq / Llama 3.3`
-
-<details>
-<summary><b>HEALTH INDEX &amp; FORECASTING SPECS</b></summary>
-
-* **Forecasting Horizon:** 90-day cashflow liquidity and operational stability indices.
-* **Intervention Engine:** Autonomous operational recovery plans synthesized in `< 450ms` via Groq LPU acceleration.
-</details>
-
-</td>
-</tr>
 </table>
 
 <img src="divider.svg" width="100%"/>
@@ -139,8 +102,6 @@
 | :--- | :--- | :--- | :--- |
 | **Argus** | Deterministic Tool Policy Firewall | **< 1.2ms** Verification Latency | `MCP Protocol` · `Python` · `FastAPI` |
 | **NeuroSwarm-X** | Thermal-Aware Swarm MPC | **< 4.8ms** OSQP Solve Cycle | `ROS2 Humble` · `OSQP` · `Unity3D` |
-| **Mule Shield AI** | Louvain Graph & Ensemble Forensics | **99.2%** Fraud Ring Recall | `XGBoost` · `CatBoost` · `SHAP` |
-| **PRAANA AI** | 90-Day Cashflow Forecasting | **< 450ms** Strategy Synthesis | `Llama 3.3 70B` · `Groq LPU` · `Next.js` |
 
 <img src="divider.svg" width="100%"/>
 
