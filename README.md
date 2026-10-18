@@ -92,6 +92,71 @@
 
 </td>
 </tr>
+
+<tr>
+<td width="50%" valign="top">
+
+#### CrimeGraph — Criminal Network Intelligence
+`[ GRAPH FORENSICS ]` `[ ENTITY LINKING ]`
+
+* **Problem:** Fragmented records across police stations hinder tracking multi-jurisdiction criminal networks, repeat offenders, and coordinated syndicate rings.
+* **Architecture:** Formulates graph link analysis utilizing Louvain community detection to uncover hidden criminal clusters, combined with LightGBM predictive risk scoring and SHAP explainability.
+* **Tech Stack:** `Python` `NetworkX` `LightGBM` `D3.js / Leaflet` `SHAP`
+
+<details>
+<summary><b>GRAPH INTELLIGENCE &amp; FORENSIC SPECS</b></summary>
+
+```
+[ Police Incident Telemetry ]
+              │
+              ▼
+┌──────────────────────────────────────┐
+│  GRAPH TOPOLOGICAL FORENSICS         │
+│  ├─ Multi-Station Entity Linking     │ ──► [ Criminal Cluster Discovery ]
+│  ├─ Louvain Community Detection      │
+│  └─ LightGBM Predictive Risk Scoring │
+└──────────────────────────────────────┘
+              │
+              ▼
+   [ Actionable Intelligence Hotspots ]
+```
+* **Network Analysis:** Real-time entity linking and syndicate ring isolation.
+* **Repository:** [CrimeGraph Codebase](https://github.com/Jeevanantham-11/CRIMEGRAPH)
+</details>
+
+</td>
+<td width="50%" valign="top">
+
+#### AI Requirement Engineer — Autonomous Spec QA
+`[ LLM WORKFLOWS ]` `[ SPECIFICATION QA ]`
+
+* **Problem:** Ambiguous, incomplete, and conflicting functional software requirements cause compounding defects and architectural rework in enterprise engineering pipelines.
+* **Architecture:** Multi-phase NLP validation engine and intelligent workflows that parse software requirement specifications to autonomously detect ambiguity, semantic inconsistencies, and non-functional requirement gaps.
+* **Tech Stack:** `Python` `NLP Pipelines` `FastAPI` `Prompt Engineering` `Zero-Shot QA`
+
+<details>
+<summary><b>REQUIREMENTS VALIDATION PIPELINE SPECS</b></summary>
+
+```
+[ Unstructured Spec Documents ]
+              │
+              ▼
+┌──────────────────────────────────────┐
+│  AI REQUIREMENTS AUDIT ENGINE        │
+│  ├─ Ambiguity & Gap Detection        │ ──► [ Defect Pre-Emption ]
+│  ├─ Semantic Consistency Verifier    │
+│  └─ NFR Completeness Classifier      │
+└──────────────────────────────────────┘
+              │
+              ▼
+   [ Verified Engineering Spec ]
+```
+* **Validation Scope:** Automated inconsistency discovery across functional & non-functional criteria.
+* **Result:** Eliminates ambiguity and architectural gaps before implementation.
+</details>
+
+</td>
+</tr>
 </table>
 
 <img src="divider.svg" width="100%"/>
@@ -102,6 +167,8 @@
 | :--- | :--- | :--- | :--- |
 | **Argus** | Deterministic Tool Policy Firewall | **< 1.2ms** Verification Latency | `MCP Protocol` · `Python` · `FastAPI` |
 | **NeuroSwarm-X** | Thermal-Aware Swarm MPC | **< 4.8ms** OSQP Solve Cycle | `ROS2 Humble` · `OSQP` · `Unity3D` |
+| **CrimeGraph** | Louvain Community & Network Forensics | **Multi-Station** Graph Linking | `Python` · `NetworkX` · `LightGBM` |
+| **AI Requirement Engineer** | Autonomous Ambiguity & Inconsistency QA | **Multi-Stage** Spec Validation | `NLP Pipelines` · `Python` · `FastAPI` |
 
 <img src="divider.svg" width="100%"/>
 
@@ -174,6 +241,7 @@
 
 | Standing | Competition / Track | Institution / Host |
 | :--- | :--- | :--- |
+| **🏆 1st Prize Winner** | Hack-a-Stage 2026 | **BNI Ascend × Saveetha Engineering College** |
 | **Finalist** | Quantathon & Programming Contest | **IIT Madras Shaastra 2026** |
 | **Top 42 / 2000+ Teams** | Intelligent Systems & Hardware Co-Design | **SmartMotion Hackathon 2.0 (CIT)** |
 | **Top 25 / 500+ Teams** | Full-Stack AI & Distributed Systems | **HACK IT 2.0 (Anna University)** |
@@ -183,6 +251,7 @@
 * DeepLearning.AI NLP Specialization
 * AWS ML Foundations & Cloud 101
 * Microsoft Learn (AI, Generative AI & Cloud Security)
+* ICT Academy (Artificial Intelligence Fundamentals & Applied AI)
 
 <img src="divider.svg" width="100%"/>
 
